@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="stlyle.css">
+</head>
+<style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: rgba(250, 226, 6, 0.61);
+        justify-content: center;
+    }
+
+    center {
+        margin: 200px 450px;
+        width: 50%;
+        height: 500px;
+        padding: 20px;
+        border: 15px solid white;
+        justify-content: center;
+        background-image: url(image/image\ 4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 10px 20px 20px black;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+        color: rgb(81, 59, 163);
+        font-size: 80px;
+        text-shadow: 0px 5px black;
+    }
+
+    input {
+        width: 500px;
+        padding: 10px 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 200px;
+        margin-right: 25px;
+        margin-top: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: aqua;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    div {
+        margin-top: 30px;
+        width: 400px;
+        height: 80px;
+        background-color: whitesmoke;
+        box-shadow: 20px 20px 30px black;
+        padding: 30px 20px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        center {
+            margin: 50px 450px;
+            width: 100%;
+            height: 550px;
+            padding: 20px;
+            border: 5px solid white;
+            justify-content: center;
+            background-image: url(image/image\ 4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            box-shadow: 10px 20px 20px black;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-style: italic;
+            font-weight: bold;
+            text-decoration: underline;
+            color: yellow;
+            font-size: 60px;
+            text-shadow: 0px 5px black;
+        }
+
+        input {
+            width: 220px;
+            padding: 15px 5px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        button {
+            width: 200px;
+            margin-right: 2px;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: yellow;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        div {
+            margin-top: 30px;
+            width: 150px;
+            height: 80px;
+            background-color: whitesmoke;
+            box-shadow: 20px 20px 30px black;
+            padding: 30px 20px;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+</style>
+
+<body>
+    <center class="container-fluid container-md container-sm  w-75">
+        <h1>FizzBuzz</h1>
+        <input type="text" placeholder="Enter your number" id="userinput"><br>
+        <button onclick="clicke()">Okay</button>
+        <div id="result"></div>
+    </center>
+
+
+    <script>
+        function clicke() {
+            if (userinput.value % 3 == 0 && userinput.value % 5 == 0) {
+                console.log('Fizzbuzz');
+                result.innerHTML = 'Fizzbuzz👍'
+            }
+
+            else if (userinput.value % 5 == 0) {
+                console.log('Buzz');
+                result.innerHTML = 'Buzz😋'
+            }
+
+            else if (userinput.value % 3 == 0) {
+                console.log('Fizz');
+                result.innerHTML = 'Fizz😉'
+            }
+
+            else if (userinput.value) {
+                console.log('Not found');
+                result.innerHTML = 'Not found 😘'
+            }
+        }
+    </script>
+</body>
+
+</html>
